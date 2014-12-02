@@ -1,0 +1,8 @@
+Changelog for uwosh.portlet.expandingnav
+
+    (name of developer listed in brackets)
+
+uwosh.portlet.expandingnav - .0.1 Unreleased
+
+    - Initial package structure.
+      [zopeskel]

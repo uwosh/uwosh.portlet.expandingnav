@@ -1,0 +1,16 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="uwosh.portlet.expandingnav">
+
+    <browser:resource
+        name="uwosh_portlet_expandingnav_expnav.js"
+        file="javascript/expnav.js"
+        />
+
+    <browser:resource
+        name="uwosh_portlet_expandingnav_expnav.css"
+        file="stylesheets/expnav.css"
+        />
+
+</configure>

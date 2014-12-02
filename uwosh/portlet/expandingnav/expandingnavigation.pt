@@ -1,0 +1,73 @@
+<tal:block i18n:domain="plone">
+<dl class="portlet portletNavigationTree"  
+    tal:define="root view/navigation_root">
+
+    <dt class="portletHeader" tal:condition="view/include_title">
+        <span class="portletTopLeft"></span>
+        <a href="#" 
+           class="tile"
+           tal:condition="not:view/title"
+           tal:attributes="href string:${root/absolute_url}/sitemap" 
+           i18n:translate="box_navigation">Expanding Navigation</a>
+       <a href="#" 
+           class="tile"
+           tal:condition="view/title"
+           tal:attributes="href string:${root/absolute_url}/sitemap"
+           tal:content="view/title">Expandin Navigation</a>
+        <span class="portletTopRight"></span>
+    </dt>
+
+    <dd class="portletItem lastItem expNavTree">
+        <div class="navTreeItem navTreeLevel0"
+            tal:condition="view/include_top">
+            <div tal:define="selectedClass view/root_item_class;
+                             rootIsPortal view/root_is_portal;">
+               <a tal:attributes="href root/absolute_url;
+                                  title root/Description;
+                                  class selectedClass">
+               <img src="" height="16" width="16" alt=""
+                    tal:condition="view/root_icon"
+                    tal:attributes="src view/root_icon" />
+               <div tal:condition="rootIsPortal"
+                     i18n:translate="tabs_home">Home</div>
+               <div tal:condition="not:rootIsPortal"
+                     tal:content="root/Title">Root item title</div>
+               </a>
+            </div>
+        </div>
+        <div tal:replace="structure view/createNavTree">
+            SUBTREE
+        </div>
+        <span class="portletBottomLeft"></span>
+        <span class="portletBottomRight"></span>
+    </dd>
+</dl>
+<script type="text/javascript">
+<!--
+//http://www.dreamincode.net/code/snippet293.htm
+function getElementsByName_iefix(tag, name) {
+     
+     var elem = document.getElementsByTagName(tag);
+     var arr = new Array();
+     for(i = 0,iarr = 0; i < elem.length; i++) {
+          att = elem[i].getAttribute("name");
+          if(att == name) {
+               arr[iarr] = elem[i];
+               iarr++;
+          }
+     }
+     return arr;
+}
+
+if (navigator.appName=="Microsoft Internet Explorer")
+{
+    hiddenObjects = getElementsByName_iefix('div', 'displayMenuFalse');
+}
+else { hiddenObjects = document.getElementsByName('displayMenuFalse'); }
+
+for(i = 0; i < hiddenObjects.length; i++)
+    hiddenObjects[i].style.display='none';
+
+//-->
+</script>
+</tal:block>

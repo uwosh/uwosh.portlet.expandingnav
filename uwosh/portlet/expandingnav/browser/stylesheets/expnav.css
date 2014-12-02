@@ -1,0 +1,92 @@
+/* Stylesheet for the 'CampusTour Theme' Plone theme */
+
+dt.portletHeader {
+    border-bottom: none;
+}
+
+.portletNavigationTree dd li a {
+    border-bottom: none;
+}
+
+.navTreeItem {
+    margin: 0px 2px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.navTreeItem a div {
+    padding: 6px 0px;
+}
+
+.navTreeItem a div:hover {
+    color: #D79A27;
+}
+
+.navTreeCurrentItem div {
+    text-decoration: underline;
+}
+
+.expnav-dottedtp, .expnav-dottedbt {
+    padding-top: 6px;
+}
+
+/* Style: seperate levels by horizontal lines
+.expnav-dottedtp {
+    border-top: 1px dotted #999;
+    margin-bottom: 2px;
+}
+
+.expnav-dottedbt {
+    border-top: 1px dotted #999;
+}
+*/
+
+/* Style: seperate levels by color */
+.navTree {
+    border-bottom: 1px dotted #999;
+    border-top: 1px dotted #999;
+    margin-bottom: 2px;
+}
+
+.navTreeLevel1 {
+    background-color: #EEE;
+}
+
+.navTreeLevel2 {
+    background-color: #DDD;
+}
+
+.navTreeLevel3 {
+    background-color: #CCC;
+}
+
+.navTreeLevel4 {
+    background-color: #BBB;
+}
+
+.navTreeLevel5 {
+    background-color: #AAA;
+}
+
+.navTreeLevel6 {
+    background-color: #999;
+}
+
+.navTreeLevel7 {
+    background-color: #888;
+}
+
+.navTreeLevel8 {
+    background-color: #777;
+}
+
+.navTreeLevel9 {
+    background-color: #666;
+}
+
+/* Style: seperate levels with vertical line
+.navTree {
+    border-left: 2px solid #1166FF;
+    margin-left: 10px;
+}
+*/

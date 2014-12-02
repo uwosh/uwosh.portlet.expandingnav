@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<portlets>
+
+ <!-- Portlet type registrations -->
+
+ <portlet
+   addview="uwosh.portlet.expandingnav.ExpandingNavigation"
+   title="Expanding Navigation"
+   description="An expadning navigation that uses javascript animations"
+   />
+
+</portlets>
